@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.banner{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+.banner a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 60px;
+}
+.text-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* padding: 10px; */
+}
+.text-box input{
+    text-align: center;
+    height: 20px;
+}
+#text-box{
+    border:2px solid rgb(250, 243, 243);
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+#text-box input{
+    background-color: black;
+    border: none;
+}
+.text-box #text-box input {
+    color: white;
+}
+ul{
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+nav ul img{
+    width: 40px;
+}
+.nav-div{
+    display: none;
+}
+.main-ad-container{
+    position: absolute;
+    height: 80vh;
+    background-image: url(./Assets/pexels-photo-2016145.webp);
+    background-size: cover;
+    background-position: center;
+    
+}
+.links{
+    margin: 5px;
+    display: flex;
+    gap: 10px;
+}
+.links a{
+    text-decoration: underline;
+    font-weight: 600;
+    color: white;
+}
+.discount-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background-color: #3C3B8D;
+    color: white;
+}
+.main-ad-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 25px;
+   
+}
+.shop-now{
+    margin-left: 70px;
+    text-align: center;
+}
+.shop-now h2{
+    font-size: large;
+}
+.shop-now h1{
+    font-size: 3rem;
+}
+.heading{
+    margin-bottom: 10px;
+}
+/* .button{} */
+.button button{
+    width: 150px;
+    border-radius: 3px;
+    border: 2px solid black;
+    padding: 15px;
+    font-weight: 800;
+    background-color: white;
+    cursor: pointer;
+}
+.button button:hover{
+    background-color: #cecece;
+}
+.lowest-price-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+.heading-2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.heading-2 h3{
+    font-weight: 300;
+}
+.heading-2 h1{
+    margin-bottom: 10px;
+}
+.lowest-price-container button{
+    background-color: white;
+    border-radius: 5px;
+}
+/* .palermo{
+    display: flex;
+    margin-top: 100px;
+    position: relative;
+    overflow: visible;
+    height: 350px;
+    width: 100%;
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+.palermo-heading h3{
+    font-weight: 400;
+}
+.heading-3{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 200px;
+    z-index: 30000;
+}
+.palermo-img{
+    position: relative;
+    z-index: 0;
+}
+.promo-video{
+    width: 600px;
+    height: 350px;
+}
+.palermo-button{
+    margin-top: 10px;
+}
+.palermo-button button{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+}
+.palermo-img img{
+    height: 900px;
+    width: 400px;
+} */
+.palermo{
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    
+    overflow: visible; /* Allows child elements to overflow */
+    height: 70vh;
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    margin-top: 90px;
+} 
+.left-section {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    
+    overflow: visible;
+    
+}
+.left-section,.right-section{
+    margin-left: 90px;
+}
+.promo-video {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 2;
+    
+}
+
+.text-overlay {
+    position: relative;
+    color: black;
+    z-index: 3; 
+    left: 8%;
+}
+
+.text-overlay h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.buttons button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}
+
+/* Right section for the image */
+.right-section {
+    width: 55%;
+    position: relative;
+    overflow: visible; /* Allows image to overflow container */
+}
+.right-section img{
+    width: 600px;
+}
+.product-image {
+    width: 120%;
+    position: relative;
+    top: -30px;
+    left: -10%;
+    z-index: 1; 
+}
+.playbook-container{
+    margin-bottom: 70px;
+    margin-top: 150px;
+} 
+.playbook-header{
+    text-align: center;
+    margin-bottom: 40px;
+} 
+.playbook-grid{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.playbook-grid-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.playbook-grid-items img{
+    margin-bottom: 20px;
+    width: 350px;
+    height: 400px;
+}
+.playbook-grid-items button{
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 4px;
+}
+.playbook-grid-items h2{
+    margin-bottom: 20px;
+}
+.playbook-grid-items button{
+    width: 150px;
+    height: 30px;
+    background-color: #0f2027;
+    color: white;
+}
+.fanty-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-image: url(./Assets/fenty.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.fanty-header{
+    margin-left: 40px;
+    justify-content: center;
+}
+.fanty-header button{
+    margin-top: 20px;
+    padding: 10px;
+    width: 120px;
+    color: black;
+    background-color: #cecece;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.fanty-header h2{
+    font-weight: 100;
+}
+.down-fanty{
+    margin-top: 550px;
+    margin-right: 20px;
+   
+}
+.fanty-romeo h2{
+    font-weight: 100;
+}
+.bike-container{
+    background-image: url(./Assets/4.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    color: white;
+}
+.bike-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}  
+.bike-container-heading{
+    margin-left: 80%;
+    margin-bottom: 200px;
+}
+.bike-container-heading h3{
+    font-weight: 200;
+}
+.bike-container-heading h3{
+   margin-top: 10px;
+}
+.buttondiv{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.buttondiv button{
+    width: auto;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.buttondiv button:hover{
+    cursor: pointer;
+    background-color: #cecece;
+}
+.sports-grid{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.sports-grid-items{
+    position: relative;
+    z-index: 0;
+}
+.sports-heading{
+    position: absolute;
+    top: 87%;
+    left: 30%;
+    text-decoration: none;
+    color: white;
+    font-size: xx-small;
+}
+.sports-heading-1{
+    position: absolute;
+    top: 87%;
+    left: 15%;
+    font-size: xx-small;
+    font-weight: 700;
+    color: white;
+}
+.sports-heading-3{
+    position: absolute;
+    top: 87%;
+    left: 35%;
+    font-size: xx-small;
+    font-weight: 700;
+    color: white;
+}
+.sports-grid-items img{
+    width: 300px;
+    height: 400px;
+}
+.sports-heading-4{
+    position: absolute;
+    top: 87%;
+    left: 29%;
+    font-size: xx-small;
+    font-weight: 700;
+    color: white;
+}
+.highlights-container{
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+.highlights-header{
+    margin-bottom: 25px;
+}
+.highlight-grid-items img{
+    width: 300px;
+    height: 400px;
+}
+.highlight-grid-items{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.highlight-grid-item h2,.highlight-grid-item img{
+    margin-bottom: 10px;
+}
+.highlight-grid-item button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.puma-one8{
+    background-image: url(https://images.puma.com/image/upload/c_scale,f_auto,q_auto:good,w_1280/cms/images/953b99043fc3ec28d0f78a56167e739a51d6afc8?_a=BAMCkGfi0);
+    
+    
+    height: 400px;
+}
+.puma-one-heading{
+    position: relative;
+    padding: 150px;
+    color: white;
+}
+.puma-one-heading h1,.puma-one-heading p{
+  margin-bottom: 10px;
+}
+.puma-one-heading button{
+    /* width: 100px;
+    height: 30px; */
+    width: 100px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #555;
+    cursor: pointer;
+}
+.t-shirt-div{
+    margin-top: 30px;
+   
+}
+.t-shirt-grid-items{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    font-size: 0.5em;
+    z-index: 0;
+}
+.t-shirt-grid-item{
+    position: relative;
+    z-index: 0;
+}
+.t-shirt-heading-2{
+    position: absolute;
+    top: 87%;
+    left: 30%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.t-shirt-heading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.t-shirt-div img{
+    width: 300px;
+    height: 400px;
+}
+.mmq-div{
+    margin-top: 50px;
+    background-image: url(https://images.puma.com/image/upload/c_scale,f_auto,q_auto:good,w_1280/cms/images/21e926883273ea2f81973344ac8fdd4174716bd5?_a=BAMCkGfi0);
+    text-align: center;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    align-content: center;
+    margin-bottom: 40px;
+}
+.mmq-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mmq-heading button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+.mmq-heading h2{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.recomendation-grids{
+    margin-left: 100px;
+    width: 700px;
+}
+.recomendation-grid-item img{
+    width: 300px;
+}
+.recomendation-grid-items{
+    position: relative;
+    z-index: 0;
+}
+.recomendation-grid-item{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;  
+}
+.unisex{
+    position: absolute;
+    top: 87%;
+    left: 30%;
+    z-index: 1;
+}
+/* Basic styling for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #00aaff;
+}
+
+.footer-section .social a {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #444;
+}
+/* Extra Small Mobile Phones (up to 350px) */
+@media (max-width: 350px) {
+    .banner {
+        height: 25px;
+        padding: 3px;
+    }
+    .nav-div, nav ul img {
+        width: 25px;
+    }
+    .text-box {
+        flex-direction: column;
+        gap: 4px;
+    }
+    #text-box {
+        width: 100%;
+        padding: 10px;
+    }
+    .main-ad-container, .fanty-container, .bike-container, .puma-one8 {
+        height: 45vh;
+        background-size: cover;
+    }
+    .shop-now h1 {
+        font-size: 1.5rem;
+    }
+    .shop-now h2 {
+        font-size: 1rem;
+    }
+    .button button {
+        width: 80px;
+        padding: 8px;
+    }
+    .lowest-price-container {
+        padding: 40px 15px;
+    }
+    .palermo {
+        flex-direction: column;
+    }
+    .left-section, .right-section {
+        width: 100%;
+        margin-left: 0;
+    }
+    .promo-video {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .playbook-grid-items img, .sports-grid-items img, .highlight-grid-items img {
+        width: 100%;
+        height: auto;
+    }
+    .sports-heading, .sports-heading-1, .sports-heading-3, .sports-heading-4 {
+        font-size: xx-small;
+        left: 10%;
+    }
+}
+
+/* Small Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+    .banner {
+        height: 28px;
+        padding: 5px;
+    }
+    .nav-div, nav ul img {
+        width: 28px;
+    }
+    .text-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #text-box {
+        width: 100%;
+        padding: 12px;
+    }
+    .main-ad-container, .fanty-container, .bike-container, .puma-one8 {
+        height: 50vh;
+        background-size: cover;
+    }
+    .shop-now h1 {
+        font-size: 1.8rem;
+    }
+    .shop-now h2 {
+        font-size: 1.1rem;
+    }
+    .button button {
+        width: 90px;
+        padding: 9px;
+    }
+    .lowest-price-container {
+        padding: 45px 18px;
+    }
+    .playbook-grid-items img, .sports-grid-items img, .highlight-grid-items img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile Phones (Portrait) - up to 600px */
+@media (max-width: 600px) {
+    /* General adjustments for smaller screens */
+    .banner {
+        height: 30px;
+        padding: 5px;
+    }
+    .nav-div, nav ul img {
+        width: 30px;
+    }
+    .text-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #text-box {
+        width: 100%;
+    }
+    .main-ad-container, .fanty-container, .bike-container, .puma-one8 {
+        height: 50vh;
+        background-size: cover;
+    }
+    .shop-now h1 {
+        font-size: 2rem;
+    }
+    .shop-now h2 {
+        font-size: 1.2rem;
+    }
+    .button button {
+        width: 100px;
+        padding: 10px;
+    }
+    .lowest-price-container {
+        padding: 50px 20px;
+    }
+    .palermo {
+        flex-direction: column;
+    }
+    .left-section, .right-section {
+        width: 100%;
+        margin-left: 0;
+    }
+    .promo-video {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .playbook-grid-items img, .sports-grid-items img, .highlight-grid-items img {
+        width: 100%;
+        height: auto;
+    }
+    .sports-heading, .sports-heading-1, .sports-heading-3, .sports-heading-4 {
+        font-size: x-small;
+        left: 20%;
+    }
+}
+
+/* Tablets (Portrait) - up to 900px */
+@media (max-width: 900px) {
+    /* Adjustments for medium screens like tablets */
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5px;
+    }
+    .banner {
+        padding: 10px;
+    }
+    .text-box, .links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .main-ad-container {
+        height: 60vh;
+    }
+    .shop-now h1 {
+        font-size: 2.5rem;
+    }
+    .button button {
+        width: 120px;
+        padding: 12px;
+    }
+    .lowest-price-container {
+        padding: 80px 20px;
+    }
+    .playbook-grid-items img, .sports-grid-items img, .highlight-grid-items img {
+        width: 80%;
+    }
+}
+
+/* Small Laptops and Large Tablets - up to 1200px */
+@media (max-width: 1200px) {
+    .nav-div {
+        display: none;
+    }
+    .text-box {
+        gap: 8px;
+    }
+    .main-ad-container {
+        height: 70vh;
+    }
+    .shop-now h1 {
+        font-size: 2.8rem;
+    }
+    .lowest-price-container {
+        padding: 90px 20px;
+    }
+    .playbook-grid-items img, .sports-grid-items img, .highlight-grid-items img {
+        width: 70%;
+    }
+    .fanty-container, .bike-container, .puma-one8 {
+        height: 70vh;
+    }
+}
+
+
